@@ -11,8 +11,14 @@
     $cifrado = empty($_POST['cifrado']) ? '' : $_POST['cifrado'];
     $descifrado  = empty($_POST['descifrado'])  ? '' : $_POST['descifrado'];
 
-    $cifrado_resultado = empty($_POST['cifrado_resultado']) ? $cifrado : Cifrador::cifrar_mensaje($mensaje, $clave, 256);
-    $descifrado_resultado = empty($_POST['descifrado_resultado']) ? $descifrado  : Cifrador::descifrar_mensaje($cifrado, $clave, 256);
+    if (strlen($clave) >= 16){
+        $cifrado_resultado = empty($_POST['cifrado_resultado']) ? $cifrado : Cifrador::cifrar_mensaje($mensaje, $clave, 128);
+        $descifrado_resultado = empty($_POST['descifrado_resultado']) ? $descifrado  : Cifrador::descifrar_mensaje($cifrado, $clave, 128);
+    }
+    else{
+        $cifrado_resultado ="";
+        $descifrado_resultado ="";
+    }
 ?>
 
 <!doctype html>
