@@ -17,6 +17,10 @@ body{
     font-weight: bold;
 }
 
+.corrector{
+   padding: 0 20px 0 20px;
+}
+
 .etiqueta{
     color: #6c757d;
     font-weight: bold;

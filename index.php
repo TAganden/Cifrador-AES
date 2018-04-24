@@ -34,18 +34,20 @@
     </nav>
     <div class="container">
         <form method="post">
-               
-            <div class="form-group row">
+            
+           
+            <div class="form-group row corrector">
                 <label class="etiqueta" for="input_clave">Clave: </label>
                 <input class="form-control" type="text" id="input_clave" name="clave" size="40" value="<?= $clave ?>">
                 <small class="form-text text-muted mensaje_ayuda">Ingrese la clave de 32 símbolos para cifrar su mensaje</small>
             </div>
                 
-            <div class="form-group row">
+            <div class="form-group row corrector">
                 <label class="etiqueta" for="input_mensaje">Mensaje: </label>   
                 <textarea class="form-control" id="input_mensaje" name="mensaje"><?= htmlspecialchars($mensaje) ?></textarea>
                 <small class="form-text text-muted mensaje_ayuda">Ingrese el mensaje que desea cifrar con AES</small>
             </div>
+            
             
             <div class="alert alert-warning" role="alert">
                 <span>Tiempo de cifrado: <?= round(microtime(true) - $timer, 3)?> segundos </span>
@@ -64,6 +66,11 @@
                </div>
             
             </div>
+            
+            <div class="alert alert-warning" role="alert">
+                <span>Descargue el proyecto en GitHub: <a href="https://github.com/nemo51180/Cifrador-AES" target="_blank">Aquí</a> </span>
+            </div>
+            
         </form>
         
     </div>
@@ -76,8 +83,6 @@
         </div>
     
     </footer>
-
-    
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
