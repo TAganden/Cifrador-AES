@@ -1,0 +1,28 @@
+body{
+    background: #d0eafb;
+}
+.navbar_estilo{
+    background: #0d71b0;
+    color: #ffffff;
+}
+
+.container{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px; 
+}
+
+.mensaje_ayuda{
+    margin: 5px 0 5px 0;
+    font-weight: bold;
+}
+
+.etiqueta{
+    color: #6c757d;
+    font-weight: bold;
+}
+
+.footer{
+    background: #0d71b0;
+    color: #ffffff;
+}
